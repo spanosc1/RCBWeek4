@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Picture</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    </head>
+    <body>
+        <div id=""><h1>Picture Perfect!</h1></div>
+        
+        <div id="area"></div>
+        
+        <script type="text/javascript">
+            //write your code here
+            $(document).ready(function() {
+                function perfect() {
+                    var word = $("#area");
+                    var div = $('<img id="P" src="p_360.png">')
+                    word.append(div);
+                    var div = $('<img id="P" src="e_360.png">')
+                    word.append(div);
+                    var div = $('<img id="P" src="r_360.png">')
+                    word.append(div);
+                    var div = $('<img id="P" src="f_360.png">')
+                    word.append(div);
+                    var div = $('<img id="P" src="e_360.png">')
+                    word.append(div);
+                    var div = $('<img id="P" src="c_360.png">')
+                    word.append(div);
+                    var div = $('<img id="P" src="t_360.png">')
+                    word.append(div);
+                }
+                perfect();
+            })
+           
+        </script>
+    </body>
+</html>
