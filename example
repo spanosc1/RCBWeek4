@@ -1,0 +1,83 @@
+/* What happenes when the code is ran! */
+
+//---------- ---------- ---------- ----------
+//question 1
+var myVar = 1;
+
+function a() {
+    var myVar = 5 - 3;
+    b();
+    alert(myVar);
+}
+
+function b() {
+    alert(myVar);
+}
+a();
+1, 2
+/* Because... */
+b only has access to the first myVar (where it is 1) since myVar inside function a is inside function a's scope, the next alert will be 2, 5-3.
+//---------- ---------- ---------- ----------
+//question 2
+var myVar = 1;
+function d() {
+    function e() {
+        alert(myVar);
+    }
+    var myVar = 2;
+    e();
+};
+d();
+2
+/* Because... */
+When function d is called, it changes myVar to 2.  Then function e is called, where it alerts 2 because e has access to d's new myVar because it is nested.
+//---------- ---------- ---------- ----------
+//question 3: Bonus
+var myVar = 1;
+function c() {
+  this.myVar = 15;
+  alert(myVar);
+  var myVar = 3;
+  alert(myVar);
+}
+c();
+undefined, 3
+/* Because... */
+
+
+
+var chapterOne = {
+        text: "Down the Rabbit Hole We Go",
+        read: function () {
+          alert(text);
+        }
+      };
+
+var chapterTwo = {
+        text: "",
+        read: function () {
+          /*BLANKED OUT*/;
+          var levelTwo = function() {
+            var this.text = "A Pool of Tears Such A Tremendous Size.";
+          };
+          levelTwo();
+          console.log(this.text);
+        }
+      };   
+
+var chapterThree = {
+        text : "",
+        read: function() {
+         /*BLANKED OUT*/s;
+          /*BLANKED OUT*/ = function() {
+            /*BLANKED OUT*/ = function() {
+              /*BLANKED OUT*/ = "The Causcs Race and a Long Tale animal.";
+              /*BLANKED OUT*/;
+            };
+            /*BLANKED OUT*/;
+          };
+          /*BLANKED OUT*/;
+        }
+      };
+
+      this.text = "OPZ...";
